@@ -1,0 +1,119 @@
+// @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Fira Sans,sans-serif;
+    // font-family: Poppins;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+@import "modules/ramverk1-home.less";
+
+.rm-navbar {
+    display: flex;
+    place-content: flex-end;
+}
+
+p {
+    line-height: 33px;
+    opacity: .8;
+    margin-bottom: 25px;
+}
+
+.my-navbar {
+    padding: 0;
+    display: grid;
+    place-content: flex-end;
+    place-items: baseline flex-end;
+    place-items: baseline center;
+    text-align: center;
+    width: 40%;
+    grid-template-columns: repeat(3, 1fr);
+
+    ul, &, li * {
+        color: black;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    li {
+        overflow: hidden;
+    }
+
+    .rm-submenu-button {
+        display: none;
+    }
+
+    li:hover {
+        overflow: visible;
+
+        & > ul {
+            opacity: 1;
+        }
+    }
+
+    & > li > ul {
+        display: grid;
+        position: absolute;
+        transition: opacity 0.2s ease;
+        opacity: 0;
+        padding: 0;
+        padding-top: 10px;
+        row-gap: 5px;
+        
+        display: none;
+    }
+}
+
+.outer-wrap-main,
+.outer-wrap-footer {
+    padding: 0 20vw;
+}
+
+figure {
+    margin: 0;
+}
+
+.site-logo,
+.site-logo-text,
+.region-header-col-3,
+.rm-mobile,
+.region-flash,
+.next-previous,
+.outer-wrap-breadcrumb,
+.level-0 {
+    display: none;
+
+}
+
+ul.toc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-bottom: 80px;
+}
+
+li.selected * {
+    color: cornflowerblue;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+    li * {
+        text-decoration: none;
+        color: black;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
