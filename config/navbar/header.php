@@ -38,11 +38,11 @@ return [
             "url" => "om",
             "title" => "Om denna webbplats.",
         ],
-        // [
-        //     "text" => "Styleväljare",
-        //     "url" => "style",
-        //     "title" => "Välj stylesheet.",
-        // ],
+        [
+            "text" => "IP Validator",
+            "url" => "ip",
+            "title" => "IP",
+        ],
         // [
         //     "text" => "Verktyg",
         //     "url" => "verktyg",
