@@ -42,8 +42,19 @@ if (isset($class)) {
         margin: 5px 0;
     }
 
+    #result {
+        min-width: fit-content;
+        width: 300px;
+    }
+
     p {
         margin: 0;
+    }
+
+    .form {
+        width: 200px;
+        display: grid;
+        gap: 10px;
     }
 
     .form input {
