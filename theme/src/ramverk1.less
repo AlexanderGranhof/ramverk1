@@ -27,6 +27,19 @@ p {
     margin-bottom: 25px;
 }
 
+.rm-navbar {
+    background-color: #722ed1;
+
+    li, a {
+        transition: color 120ms ease;
+        color: white;
+    }
+
+    a:hover {
+        color: #42a4ff;
+    }
+}
+
 .my-navbar {
     padding: 0;
     display: grid;
@@ -35,10 +48,9 @@ p {
     place-items: baseline center;
     text-align: center;
     width: 40%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     ul, &, li * {
-        color: black;
         text-decoration: none;
         list-style: none;
     }
