@@ -53,7 +53,8 @@ class IPController implements ContainerInjectableInterface
         return $page->render();
     }
 
-    public function indexActionPost() : string {
+    public function indexActionPost() : string
+    {
         $body = json_decode($this->di->request->getBody());
         $ip = $body->ip ?? null;
         
