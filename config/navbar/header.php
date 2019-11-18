@@ -43,10 +43,10 @@ return [
             "url" => "ip",
             "title" => "IP",
         ],
-        // [
-        //     "text" => "Verktyg",
-        //     "url" => "verktyg",
-        //     "title" => "Verktyg och möjligheter för utveckling.",
-        // ],
+        [
+            "text" => "IP Geotag",
+            "url" => "geotagip",
+            "title" => "Geo tag IP.",
+        ],
     ],
 ];
