@@ -5,7 +5,12 @@
 return [
     "routes" => [
         [
-            "info" => "IP Controller.",
+            "info" => "GeoIPController.",
+            "mount" => "geotagip",
+            "handler" => "\Anax\Controller\GeoIPController",
+        ],
+        [
+            "info" => "G.",
             "mount" => "ip",
             "handler" => "\Anax\Controller\IPController",
         ],
