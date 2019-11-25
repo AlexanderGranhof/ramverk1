@@ -103,6 +103,11 @@ if (isset($class)) {
     <p>Below is a simple test which will post the the controller handling the IP validation</p>
 </div>
 
+<h4>The two links below will test the API</h4>
+<a style="display: block" target="_BLANK" href="./ip/test?ip=216.58.207.195">216.58.207.195</a>
+<a style="display: block" target="_BLANK" href="./ip/test?ip=2a00:1450:400f:80b::2003">2a00:1450:400f:80b::2003</a>
+<br>
+
 <div class="form">
     <input id="ip" placeholder="192.168.0.1 ..." type="text">
     <button id="submit">Test ip</button>

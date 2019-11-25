@@ -134,6 +134,11 @@ $client_ip = $_SERVER['REMOTE_ADDR'] ?? "::1";
 
 ?>
 
+<h4>The two links below will test the API</h4>
+<a style="display: block" target="_BLANK" href="./geotagip/test?ip=216.58.207.195">216.58.207.195</a>
+<a style="display: block" target="_BLANK" href="./geotagip/test?ip=2a00:1450:400f:80b::2003">2a00:1450:400f:80b::2003</a>
+<br>
+
 <div class="form">
     <div class="input-container">
         <input id="ip" placeholder="192.168.0.1 ..." type="text" value="<?= $client_ip ?>">
