@@ -53,6 +53,25 @@ class IPController implements ContainerInjectableInterface
         return $page->render();
     }
 
+    public function testAction() {
+        $ip = $this->di->request->getGet("ip") ?? null;
+        
+        $validIP = !!filter_var($ip, FILTER_VALIDATE_IP);
+
+        $hostname = $validIP ? gethostbyaddr($ip) : null;
+        $hostname = !is_null($validIP) ? !filter_var($hostname, FILTER_VALIDATE_IP) ? $hostname : null : null;
+
+        $data = [
+            "ip" => $ip,
+            "hostname" => $hostname,
+            "valid" => $validIP
+        ];
+
+        header("Content-Type: application/json");
+
+        return json_encode($data);
+    }
+
     public function indexActionPost() : string
     {
         $body = json_decode($this->di->request->getBody());

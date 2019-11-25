@@ -53,6 +53,16 @@ class GeoIPController implements ContainerInjectableInterface
         return $page->render();
     }
 
+    public function testAction() : string
+    {
+        $k = base64_decode("NWZhYTE1ZWRlYTkxNTYzYjg1ZTIzMDZhZjNmN2MzOTU=");
+        
+        $ip = $this->di->request->getGet("ip") ?? null;
+        $data = file_get_contents("http://api.ipstack.com/$ip?access_key=$k");
+        
+        return $data;
+    }
+
     public function indexActionPost() : string
     {
         $k = base64_decode("NWZhYTE1ZWRlYTkxNTYzYjg1ZTIzMDZhZjNmN2MzOTU=");
