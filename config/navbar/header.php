@@ -48,5 +48,10 @@ return [
             "url" => "geotagip",
             "title" => "Geo tag IP.",
         ],
+        [
+            "text" => "Weather",
+            "url" => "weather",
+            "title" => "weather.",
+        ],
     ],
 ];
