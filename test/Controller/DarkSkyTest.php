@@ -30,7 +30,7 @@ class DarkSkyTest extends TestCase
         $darksky = new Anax\DarkSky\DarkSky();
         [$lat, $lng] = ["56.1806550", "15.5907000"];
 
-        $result = $darksky->past_30_days($lat,$lng);
+        $result = $darksky->past30Days($lat,$lng);
 
         $this->assertIsObject($result);
     }

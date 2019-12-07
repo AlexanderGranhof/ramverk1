@@ -36,7 +36,7 @@ $longdata = '[{"latitude":59.3067512512210015529490192420780658721923828125,"lon
 // var_dump($longdata);
 
 if (!$showSingle) {
-    $longdata = json_decode($darksky->past_30_days($lat, $lng));
+    $longdata = json_decode($darksky->past30Days($lat, $lng));
     // $longdata = json_decode($longdata);
 }
 

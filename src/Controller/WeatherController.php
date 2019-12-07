@@ -63,6 +63,7 @@ class WeatherController implements ContainerInjectableInterface
     {
         include __DIR__ . "../../../config/keys.php";
 
+
         $darksky = $this->di->get("darksky");
 
         $ip = $this->di->request->getGet("ip") ?? null;
@@ -99,7 +100,7 @@ class WeatherController implements ContainerInjectableInterface
 
         
         if ($getPrevData) {
-            return $darksky->past_30_days($lat, $lng);
+            return $darksky->past30Days($lat, $lng);
         }
         
         $result = $darksky->week($lat, $lng);
@@ -148,7 +149,7 @@ class WeatherController implements ContainerInjectableInterface
         header("Content-Type: application/json");
 
         if ($getPrevData) {
-            return $darksky->past_30_days($lat, $lng);
+            return $darksky->past30Days($lat, $lng);
         }
 
         $result = $darksky->today($lat, $lng);
@@ -180,7 +181,7 @@ class WeatherController implements ContainerInjectableInterface
     //             return "Bad Request - No cordinates found for '$location'";
     //         }
 
-    //         $data = file_get_contents("https://api.darksky.net/forecast/$DARK_SKY_KEY/$position");
+    //         $data = file_get_contents("https://api.darksky.net/forecast/$darkSkyKey/$position");
 
     //         header("Content-Type: application/json");
 
