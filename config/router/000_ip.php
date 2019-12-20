@@ -18,6 +18,10 @@ return [
             "info" => "Weather",
             "mount" => "weather",
             "handler" => "\Anax\Controller\WeatherController",
+        ],
+        [
+            "mount" => "book",
+            "handler" => "\Anax\Controller\BookController"
         ]
     ]
 ];
