@@ -53,5 +53,10 @@ return [
             "url" => "weather",
             "title" => "weather.",
         ],
+        [
+            "text" => "Book",
+            "url" => "book",
+            "title" => "Verktyg och möjligheter för utveckling.",
+        ],
     ],
 ];

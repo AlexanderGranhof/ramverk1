@@ -33,5 +33,10 @@ return [
             "url" => "verktyg",
             "title" => "Verktyg och möjligheter för utveckling.",
         ],
+        [
+            "text" => "Book",
+            "url" => "book",
+            "title" => "Verktyg och möjligheter för utveckling.",
+        ],
     ],
 ];
