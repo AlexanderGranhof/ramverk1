@@ -71,6 +71,49 @@ class BookController implements ContainerInjectableInterface
         return $page->render();
     }
 
+    public function updateAction() {
+        $page = $this->di->get("page");
+        $req = $this->di->get("request");
+
+        $id = $req->getGet("id") ?? null;
+
+        $db = $this->di->get("db");
+        $res = $db->connect()->execute("SELECT * FROM Book")->fetchAll();
+
+        $single = null;
+
+        if ($id) {
+            $single = $db->connect()->execute("SELECT * FROM Book WHERE id = $id")->fetch();
+        }
+
+        $page->add("anax/book/update", [
+            "books" => $res,
+            "id" => $id,
+            "single" => $single
+        ]);
+
+        return $page->render();
+    }
+
+    public function updateActionPost() {
+        $req = $this->di->get("request");
+        $resp = $this->di->get("response");
+
+        $body = $req->getPost();
+        
+        $id = $req->getGet("id") ?? null;
+        $title = $body["title"] ?? null;
+        $author = $body["author"] ?? null;
+        $img = $body["img"] ?? null;
+
+        if ($id && $title && $author && $img) {
+            $db = $this->di->get("db");
+            $res = $db->connect()->execute("UPDATE Book SET title = '$title', author = '$author', img = '$img' WHERE id = $id");
+        }
+
+        return $resp->redirect("book");
+    }
+
     public function deleteActionPost(): string {
         $req = $this->di->get("request");
         $db = $this->di->get("db");

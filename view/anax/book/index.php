@@ -5,6 +5,7 @@
 <nav>
     <a href="book/create">Create</a>
     <a href="book/delete">Delete</a>
+    <a href="book/update">Update</a>
 </nav>
 <br>
 
